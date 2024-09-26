@@ -35,7 +35,7 @@ interface ISigleDataFetch {
 
 
 export const MapData = (data:IDataFetch[]): MapMovie[]  => {
-  const poster = "/assets/img/noavailable.png";
+  const poster = "/assets/img/NoAvailable.png";
     if(!data) return []
     const mappedData: MapMovie[] = data.map((movie) => ({
         title: movie.Title || "",
