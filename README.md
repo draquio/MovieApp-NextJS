@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Movie Web App - Ing. Sergio Mercado.
 
-## Getting Started
+Proyecto realizado como prueba técnica por Ing. Sergio Mercado
+## Tecnologías:
+- NextJs
+- Tailwind
+- Shadcn
 
-First, run the development server:
+![](https://movieapp-draquio.vercel.app/movie_b.webp)
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Características de la prueba
+- Proyecto creado con NextJs y Tailwind
+- Consumiendo una API externa
+- Filtros
+- Buscador
+- Server Side Rendering
+- Web optimizada
+- Desplegada
+- Dockerizada (cuenta con imagen en docker hub)
+- Test unitario de funciones y componentes
+
+![](https://i.ibb.co/DM2Mm2b/image.png)
+![](https://i.ibb.co/6bdFhqH/1727373657856.jpg)
+
+
+## Instalación de proyecto en local
+Para instalar el proyecto en local debe seguir un par de pasos.
+1. Clonar el repositorio 
+```
+git clone https://github.com/draquio/MovieApp-NextJS
+```
+2. Ingresar en la carpeta raiz con `cd movie-web-nextjs` e instalar las dependencias con `npm install`
+3. Solicitar acceso a la apiKey en `https://www.omdbapi.com/`
+4. Crear en la carpeta raíz `.env.local` y definir la api key `API_KEY="aqui-va-la-apikey"`
+5. Levantar la web con `npm run dev`
+
+### Opcional
+6. Correr las pruebas unitarias con `npm test`
+---
+
+## Descargar imagen de Docker
+Para poder correr el proyecto en local con Docker sin una API debe descargar la imagen y correrla con:
+```
+docker run -p 3000:3000 draquio/movieweb-nextjs-sergiomercado
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Desarrollador por Ing. Sergio Mercado - FullStack developer**
+- [Portfolio personal](https://draquioportfolio.vercel.app/ "Title")
+- [Linkedin](https://www.linkedin.com/in/sergio-mercado-galarza-4a4b42274/ "Title")
+- [Github](https://github.com/draquio/ "Title")
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
