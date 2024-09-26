@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
-// import { NavComponent } from "@/components/nav/NavComponent";
+import { NavComponent } from "@/components/nav/NavComponent";
 import { HeaderComponent } from "@/components/common/Header";
 import { FooterComponent } from "@/components/common/Footer";
 
@@ -48,7 +48,7 @@ export default function RootLayout({
       <body className="bg-[#192026] text-white flex flex-col min-h-dvh">
         <HeaderComponent />
         <main className="w-full max-w-[1200px] mx-auto px-3 pb-10">
-          {/* <NavComponent /> */}
+          <NavComponent />
           {children}
         </main>
         <FooterComponent />
