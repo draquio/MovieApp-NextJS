@@ -31,7 +31,7 @@ const YearComponent = () => {
     router.push(`?${params.toString()}`, { scroll: false });
   };
   return (
-    <div className="relative">
+    <div>
     <Select onValueChange={handleYearChange}>
       <SelectTrigger className="bg-[#374151] placeholder:text-[#868686] border-none">
         <SelectValue placeholder="Seleccionar año" />

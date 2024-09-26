@@ -6,34 +6,37 @@ import { FooterComponent } from "@/components/common/Footer";
 
 export const metadata: Metadata = {
   title: "Movie Web App - Ing. Sergio Mercado",
-  description: "Web de películas y series online realizado con NextJS y Tailwind por Ing. Sergio Mercado",
+  description:
+    "Web de películas y series online realizado con NextJS y Tailwind por Ing. Sergio Mercado",
   openGraph: {
-    title: 'Movie Web App - Ing. Sergio Mercado',
-    description: 'Web de películas y series online realizado con NextJS y Tailwind por Ing. Sergio Mercado',
-    siteName: 'Movie Web App',
+    title: "Movie Web App - Ing. Sergio Mercado",
+    description:
+      "Web de películas y series online realizado con NextJS y Tailwind por Ing. Sergio Mercado",
+    siteName: "Movie Web App",
     images: [
       {
-        url: 'movie_m.webp', 
+        url: "movie_m.webp",
         width: 800,
         height: 600,
-        alt: "Movie Web App - Ing. Sergio Mercado"
+        alt: "Movie Web App - Ing. Sergio Mercado",
       },
       {
-        url: 'movie_b.webp',
+        url: "movie_b.webp",
         width: 1800,
         height: 1600,
-        alt: 'Movie Web App - Ing. Sergio Mercado',
+        alt: "Movie Web App - Ing. Sergio Mercado",
       },
     ],
-    locale: 'es_ES',
-    type: 'website',
+    locale: "es_ES",
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Movie Web App - Ing. Sergio Mercado',
-    description: 'Web de películas y series online realizado con NextJS y Tailwind por Ing. Sergio Mercado',
-    creator: 'Ing. Sergio Mercado',
-    images: ['movie_m.webp'], 
+    card: "summary_large_image",
+    title: "Movie Web App - Ing. Sergio Mercado",
+    description:
+      "Web de películas y series online realizado con NextJS y Tailwind por Ing. Sergio Mercado",
+    creator: "Ing. Sergio Mercado",
+    images: ["movie_m.webp"],
   },
 };
 
@@ -46,9 +49,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-[#192026] text-white flex flex-col min-h-dvh">
         <HeaderComponent />
-        <main className="w-full max-w-[1200px] mx-auto px-3 pb-10">
-          {children}
-        </main>
+        <main className="w-full max-w-[1200px] pb-10 mx-auto px-3">{children}</main>
         <FooterComponent />
       </body>
     </html>

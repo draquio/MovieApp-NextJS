@@ -1,37 +1,6 @@
 import { MapMovie, MapSingleMovie } from "@/interface/MovieInterface";
-interface IDataFetch {
-  Title: string;
-  Year: string;
-  imdbID: string;
-  Type: string;
-  Poster: string;
-}
-interface ISigleDataFetch {
-  Title: string
-  Year: string
-  Rated: string
-  Released: string
-  Runtime: string
-  Genre: string
-  Director: string
-  Writer: string
-  Actors: string
-  Plot: string
-  Language: string
-  Country: string
-  Awards: string
-  Poster: string
-  Metascore: string
-  imdbRating: string
-  imdbVotes: string
-  imdbID: string
-  Type: string
-  DVD: string
-  BoxOffice: string
-  Production: string
-  Website: string
-  Response: string
-}
+import { IDataFetch, ISigleDataFetch } from "@/interface/Responses";
+
 
 
 export const MapData = (data:IDataFetch[]): MapMovie[]  => {

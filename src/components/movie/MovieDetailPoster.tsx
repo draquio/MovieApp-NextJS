@@ -4,12 +4,13 @@ import {
     WatchIcon,
     WatchLaterIcon,
   } from "@/icons/Icons";
-const MovieDetailPoster = (props:{poster:string}) => {
-    const {poster} = props;
+const MovieDetailPoster = (props:{poster:string, title: string}) => {
+    const {poster, title} = props;
   return (
     <>
         <img
           src={poster}
+          alt={title}
           className="w-full max-w-[300px] tablet:min-w-[300px] min-w-[200px] min-w- rounded-xl animate-blur"
         />
         <button className=" animate-fadeup w-full bg-[#374151] hover:bg-[#262c36] rounded-3xl py-3 transition ease-in-out duration-500 flex justify-center items-center gap-1">

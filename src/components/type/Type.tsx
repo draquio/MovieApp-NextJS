@@ -31,7 +31,7 @@ const TypeComponent = () => {
   ];
 
   return (
-    <div className="relative">
+    <div>
       <Select onValueChange={handleTypeChange}>
         <SelectTrigger className="bg-[#374151] placeholder:text-[#868686] border-none">
           <SelectValue placeholder="Selecionar tipo" />
@@ -51,4 +51,4 @@ const TypeComponent = () => {
   );
 };
 
-export {TypeComponent};
+export { TypeComponent };

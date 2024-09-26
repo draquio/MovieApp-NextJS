@@ -13,7 +13,7 @@ const Home = async ({ searchParams }: Props) => {
   const data = await getActualMovies(year, type, page, "batman");
 
   return (
-    <div className="">
+    <div className="w-full">
       <NavComponent />
       <Movie data={data} />
       <PaginationComponent />

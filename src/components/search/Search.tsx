@@ -19,7 +19,7 @@ const SearchComponent = () => {
         type="search"
         placeholder="Buscar pelicula o serie"
         value={query}
-        className="bg-[#374151] placeholder:text-[#868686] border-none"
+        className="bg-[#374151] placeholder:text-[white] border-none"
         onChange={(e) => setQuery(e.target.value)}
         onKeyDown={handleKeyPress}
       />
