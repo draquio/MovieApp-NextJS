@@ -6,14 +6,23 @@ Proyecto realizado como prueba técnica por Ing. Sergio Mercado
 - Tailwind
 - Shadcn
 
+### Enlaces directos
+- [MovieWebApp desplegada](https://movieapp-draquio.vercel.app/ "TheMovieApp")
+- [MovieWebApp Imagen en Docker](https://hub.docker.com/repository/docker/draquio/movieweb-nextjs-sergiomercado/ "docker image")
+- [Codigo fuente del proyecto - GitHub](https://github.com/draquio/MovieApp-NextJS" "Github")
+- [Desarrollador por Ing. Sergio Mercado](https://draquioportfolio.vercel.app/ "portfolio")
+
 ![](https://movieapp-draquio.vercel.app/movie_b.webp)
 ---
 
 ## Características de la prueba
 - Proyecto creado con NextJs y Tailwind
-- Consumiendo una API externa
+- Consumo una API externa
 - Filtros
 - Buscador
+- Paginación
+- Responsive
+- Animaciones
 - Server Side Rendering
 - Web optimizada
 - Desplegada
