@@ -1,7 +1,7 @@
 
 import { searchMovie } from "@/api/api";
 import { Movie } from "@/components/movies/Movie";
-// import { PaginationComponent } from "@/components/pagination/Pagination";
+import { PaginationComponent } from "@/components/pagination/Pagination";
 import { MapMovie } from "@/interface/MovieInterface";
 interface Props {
   searchParams: { query?: string; year: string; page: string; type: string }; // Define el tipo de los query params
@@ -17,7 +17,7 @@ const SearchPage = async ({ searchParams }: Props) => {
   return (
     <div className="w-full max-w-[1200px] mx-auto">
         <Movie data={data} />
-        {/* {data.length > 0 ? <PaginationComponent /> : <p className="text-center w-full">No hay resultados</p>} */}
+        {data.length > 0 ? <PaginationComponent /> : <p className="text-center w-full">No hay resultados</p>}
     </div>
   );
 };
