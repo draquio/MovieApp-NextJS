@@ -19,7 +19,7 @@ const SearchPage = async ({ searchParams }: Props) => {
     <div className="w-full max-w-[1200px] mx-auto">
         <NavComponent />
         <Movie data={data} />
-        {data.length > 0 ? <PaginationComponent /> : <p className="text-center w-full">No hay resultados</p>}
+        <PaginationComponent length={data.length} />
     </div>
   );
 };

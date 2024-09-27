@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import {
   Pagination,
   PaginationContent,
@@ -10,7 +10,8 @@ import {
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const PaginationComponent = () => {
+const PaginationComponent = (props: { length: number }) => {
+  const { length } = props;
   const router = useRouter();
   const searchParams = useSearchParams();
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -25,11 +26,12 @@ const PaginationComponent = () => {
     router.push(`?${params.toString()}`, { scroll: false });
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
     setCurrentPage(page);
   };
-
+  if (length === 0) return <p className="text-center">No hay películas / series</p>;
+  if (length < 10) return;
   return (
     <Pagination className="cursor-pointer my-10 text-white">
       <PaginationContent>
@@ -41,7 +43,7 @@ const PaginationComponent = () => {
         {[1, 2, 3].map((page) => (
           <PaginationItem key={page}>
             <PaginationLink
-              className={`${currentPage === page && 'text-black'}`}
+              className={`${currentPage === page && "text-black"}`}
               isActive={currentPage === page}
               onClick={() => handlePageChange(page)}
             >

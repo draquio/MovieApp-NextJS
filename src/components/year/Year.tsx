@@ -23,6 +23,7 @@ const YearComponent = () => {
 
   const handleYearChange = (year: string) => {
     const params = new URLSearchParams(searchParams.toString());
+    params.delete("page");
     if (year == " ") {
       params.delete("year");
     } else {
@@ -32,21 +33,32 @@ const YearComponent = () => {
   };
   return (
     <div>
-    <Select onValueChange={handleYearChange}>
-      <SelectTrigger className="bg-[#374151] placeholder:text-[#868686] border-none">
-        <SelectValue placeholder="Seleccionar año" />
-      </SelectTrigger>
-      <SelectContent>
-        <SelectGroup>
-          <SelectLabel>Selecionar año</SelectLabel>
-          <SelectItem value=" ">Sin específicar</SelectItem>
-          {years.slice().reverse().map((year, index) => (
-            <SelectItem key={index} value={year.toString()}>{year}</SelectItem>
-          ))}
-          <SelectItem value="pineapple">Pineapple</SelectItem>
-        </SelectGroup>
-      </SelectContent>
-    </Select>
+      <Select onValueChange={handleYearChange}>
+        <SelectTrigger className="bg-[#374151] placeholder:text-[#868686] border-none" aria-label="Seleccionar año">
+          <SelectValue placeholder="Seleccionar año" />
+        </SelectTrigger>
+        <SelectContent
+          ref={(ref) => {
+            if (!ref) return;
+            ref.ontouchstart = (e) => {
+              e.preventDefault();
+            };
+          }}
+        >
+          <SelectGroup>
+            <SelectLabel>Seleccionar año</SelectLabel>
+            <SelectItem value=" ">Sin específicar</SelectItem>
+            {years
+              .slice()
+              .reverse()
+              .map((year, index) => (
+                <SelectItem key={index} value={year.toString()}>
+                  {year}
+                </SelectItem>
+              ))}
+          </SelectGroup>
+        </SelectContent>
+      </Select>
     </div>
   );
 };

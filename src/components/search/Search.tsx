@@ -11,7 +11,6 @@ const SearchComponent = () => {
     if (e.key === "Enter" && query != "") {
       e.preventDefault();
       router.push(`search?query=${query}`);
-      // setQuery("");
     }
   };
   return (

@@ -1,10 +1,10 @@
 import { getActualMovies } from "@/api/api";
-import {Movie} from "@/components/movies/Movie";
+import { Movie } from "@/components/movies/Movie";
 import { NavComponent } from "@/components/nav/NavComponent";
 import { PaginationComponent } from "@/components/pagination/Pagination";
 
 interface Props {
-  searchParams: { year: string; type: string, page: string };
+  searchParams: { year: string; type: string; page: string };
 }
 const Home = async ({ searchParams }: Props) => {
   const year = searchParams.year || "";
@@ -16,7 +16,7 @@ const Home = async ({ searchParams }: Props) => {
     <div className="w-full">
       <NavComponent />
       <Movie data={data} />
-      <PaginationComponent />
+      <PaginationComponent length={data.length} />
     </div>
   );
 };

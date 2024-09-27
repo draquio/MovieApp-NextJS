@@ -10,7 +10,7 @@ const MovieItem = (props: { movie: MapMovie }) => {
         <img
           src={movie.poster && movie.poster !== 'N/A' ? movie.poster : defaultPoster}
           alt={movie.title}
-          className="aspect-[3/4] rounded-md w-full"
+          className="aspect-[3/4] rounded-md w-full object-cover"
         />
         <h3 className="text-xl max-w-[300px]">{movie.title}</h3>
       </div>

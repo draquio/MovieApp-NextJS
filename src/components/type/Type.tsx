@@ -16,6 +16,7 @@ const TypeComponent = () => {
 
   const handleTypeChange = (type: string) => {
     const params = new URLSearchParams(searchParams.toString());
+    params.delete("page");
     if (type == " ") {
       params.delete("type");
     } else {
@@ -25,18 +26,26 @@ const TypeComponent = () => {
   };
 
   const types = [
+    { name: "Todos", tipo: " " },
     { name: "Películas", tipo: "movie" },
     { name: "Series", tipo: "series" },
-    { name: "Ambos", tipo: " " },
+    { name: "Juegos", tipo: "game" },
   ];
 
   return (
     <div>
       <Select onValueChange={handleTypeChange}>
-        <SelectTrigger className="bg-[#374151] placeholder:text-[#868686] border-none">
-          <SelectValue placeholder="Selecionar tipo" />
+        <SelectTrigger className="bg-[#374151] placeholder:text-[#868686] border-none" aria-label="Seleccionar tipo">
+          <SelectValue placeholder="Seleccionar tipo" />
         </SelectTrigger>
-        <SelectContent className="">
+        <SelectContent
+          ref={(ref) => {
+            if (!ref) return;
+            ref.ontouchstart = (e) => {
+              e.preventDefault();
+            };
+          }}
+        >
           <SelectGroup>
             <SelectLabel>Tipo</SelectLabel>
             {types.map((type, index) => (
