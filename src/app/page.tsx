@@ -3,6 +3,8 @@ import { Movie } from "@/components/movies/Movie";
 import { NavComponent } from "@/components/nav/NavComponent";
 import { PaginationComponent } from "@/components/pagination/Pagination";
 
+
+
 interface Props {
   searchParams: { year: string; type: string; page: string };
 }

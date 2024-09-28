@@ -64,7 +64,7 @@ describe("MapData function from MapperData Helper", () => {
         Year: '',
         imdbID: '',
         Type: '',
-        Poster: '', // Campo póster vacío
+        Poster: '',
       },
     ];
     const expected: MapMovie[] = [
